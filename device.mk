@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+DONT_UNCOMPRESS_PRIV_APPS_DEXS := true
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 # Get non-open-source specific aspects
