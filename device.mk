@@ -64,11 +64,6 @@ PRODUCT_PACKAGES += \
 # Fastboot
 TARGET_BOARD_FASTBOOT_INFO_FILE := $(LOCAL_PATH)/fastboot-info.txt
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    com.fingerprints.extension@1.0.vendor \
-    vendor.goodix.hardware.fingerprintextension@1.0.vendor
-
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
@@ -77,9 +72,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
     $(LOCAL_PATH)/gps/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
     $(LOCAL_PATH)/gps/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf
-
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.0.vendor
 
 # Input
 PRODUCT_COPY_FILES += \
