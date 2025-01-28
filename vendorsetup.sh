@@ -26,7 +26,3 @@ git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-22
 rm -rf packages/apps/ViPER4AndroidFX
 git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git -b v4a packages/apps/ViPER4AndroidFX
 
-# BCR
-rm -rf vendor/bcr
-git clone https://github.com/Chaitanyakm/vendor_bcr.git -b main vendor/bcr --depth=1
-
