@@ -7,6 +7,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := \
     Drive \
     GoogleCamera \
+    GoogleContacts \
     Maps \
     Photos \
     Chrome \
