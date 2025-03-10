@@ -90,10 +90,6 @@ ifeq ($(TARGET_BUILD_VARIANT),user)
 TARGET_DISABLE_MATLOG := true
 endif
 
-# PocketMode
-PRODUCT_PACKAGES += \
-    XiaomiPocketMode
-
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
     RemovePackages
