@@ -244,4 +244,6 @@
     <string name="config_bypassChargingSuspendValue" translatable="false">1</string>
     <string name="config_bypassChargingResumeValue" translatable="false">0</string>
     <string name="config_bypassChargingLimitValue" translatable="false">2</string>
+
+    <bool name="config_irCameraAvailable">true</bool>
 </resources>
