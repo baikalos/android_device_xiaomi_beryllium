@@ -12,7 +12,7 @@ git clone https://github.com/PocoF1-Resources/proprietary_vendor_xiaomi_sdm845-c
 
 # Kernel Tree
 rm -rf kernel/xiaomi/sdm845
-git clone https://github.com/PocoF1-Resources/android_kernel_xiaomi_sdm845.git -b 15.0 kernel/xiaomi/sdm845 --depth=1
+git clone https://github.com/PocoF1-Resources/android_kernel_xiaomi_sdm845.git -b 15.0-KSU-Next kernel/xiaomi/sdm845 --depth=1
 
 # MiCam
 rm -rf vendor/miuicamera
@@ -20,9 +20,13 @@ git clone https://github.com/Legendleo90/vendor_miuicamera.git -b fourteen vendo
 
 # Hardware
 rm -rf hardware/xiaomi
-git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-22.1 hardware/xiaomi
+git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-22.2 hardware/xiaomi
 
 # Viper4FX
 rm -rf packages/apps/ViPER4AndroidFX
 git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git -b v4a packages/apps/ViPER4AndroidFX
 
+# KernelSU
+cd kernel/xiaomi/sdm845
+curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next-susfs/kernel/setup.sh" | bash -s next-susfs
+cd ../../..
