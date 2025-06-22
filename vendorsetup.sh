@@ -24,5 +24,5 @@ git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git -b v4a p
 
 # KernelSU
 cd kernel/xiaomi/sdm845
-curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next-susfs/kernel/setup.sh" | bash -s next-susfs
+curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -
 cd ../../..
