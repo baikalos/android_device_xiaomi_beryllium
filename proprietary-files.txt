@@ -28,6 +28,7 @@ vendor/etc/tas2559_r.ftcfg
 
 # Audio
 vendor/lib/libacdbloader.so
+vendor/lib/libaudioroute-v34.so
 vendor/lib/libcsd-client.so
 
 # Bluetooth
