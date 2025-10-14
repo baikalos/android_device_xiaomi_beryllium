@@ -11,6 +11,7 @@ LOCAL_OVERRIDES_PACKAGES := \
     Maps \
     Photos \
     Chrome \
+    Chrome64 \
     Glimpse \
     PrebuiltGmail \
     Chrome-Stub \
