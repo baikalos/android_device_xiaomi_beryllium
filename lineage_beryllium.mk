@@ -24,10 +24,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-# Matrixx
-MATRIXX_BUILD_TYPE := Official
-WITH_GMS := true
-WITH_GMS_COMMS_SUITE := true
 TARGET_SUPPORTS_WALLEFFECT := true
 
 # Bypass Charging flags
