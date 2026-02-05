@@ -12,6 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 $(call inherit-product, vendor/xiaomi/beryllium/beryllium-vendor.mk)
 
 # Boot animation
+# TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 2246
 TARGET_SCREEN_WIDTH := 1080
 
@@ -47,6 +48,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/sound_trigger_mixer_paths_wcd9340.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths_wcd9340.xml \
     $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml
 
+# Camera
+$(call inherit-product-if-exists, device/xiaomi/beryllium-miuicamera/config.mk)
+$(call soong_config_set,camera,package_name,com.android.camera)
+$(call soong_config_set,camera,override_format_from_reserved,true)
+
 # Control groups and task profiles
 PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
@@ -79,6 +85,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/keylayout/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl \
     $(LOCAL_PATH)/keylayout/uinput-goodix.kl:system/usr/keylayout/uinput-goodix.kl
+
+# Matlog
+ifeq ($(TARGET_BUILD_VARIANT),user)
+TARGET_DISABLE_MATLOG := true
+endif
 
 # PocketMode
 PRODUCT_PACKAGES += \

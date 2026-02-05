@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+SOONG_CONFIG_qtidisplay_gralloc4 := true
+SOONG_CONFIG_qtidisplay_target_no_camera_custom_format := true
+
 # Inherit from sdm845-common
 include device/xiaomi/sdm845-common/BoardConfigCommon.mk
 
@@ -14,6 +17,9 @@ TARGET_OTA_ASSERT_DEVICE := beryllium
 
 # Audio
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
+
+# Camera
+TARGET_USES_MIUI_CAMERA := true
 
 # Display
 TARGET_SCREEN_DENSITY := 440
